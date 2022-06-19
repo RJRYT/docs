@@ -223,7 +223,25 @@ A guest is any person or web spider that is not logged into the website. Once a 
 Members may have access to profile and notification options that are unavailable to guests, although these options may vary, depending on the permissions which have been set by the website administrator. Members can also be placed in membergroups, made moderators or administrators, given special permissions and access to members-only areas. Being able to send personal messages, receive forum emails, and post new polls and topics are some additional benefits that may be available to members of the website.
 
 A guest may register at any time by simply selecting the register option from the main menu.</p>
+<h4>The Registration Screen</h4>
+<p>Website require a guest to accept a registration agreement before the registration process can begin. By checking the option I Agree, a guest consents to comply with the agreement throughout the duration of their membership. Website may also incorporate a minimum age into the agreement process.</p>
 <p><a class="popup-img" href="assets/images/web-register.jpg"><img class="img-fluid border" src="assets/images/web-register.jpg" alt=""></a></p>
+<p>Upon arrival at the registration screen, a guest is requested to enter a username and a valid email address. Failure to use a valid email address may hinder registration, depending on how a website is configured.
+
+The option to choose an authentication method is only shown if OpenID is allowed by the administrator as a registration option. If OpenID is not allowed, then a password must be entered.
+
+A form of visual verification may be present in order to confirm that a guest is actually a person and not a bot. This verification may be requested in two ways - CAPTCHA and custom questions. The CAPTCHA method displays an image containing a random collection of letters, which a guest must enter into a text field. The custom questions method displays one or more relatively simple questions, which a guest must answer correctly. A forum may be configured to use both methods at the same time.
+
+Once a guest completes the registration form, there are three possibilities for what is displayed next based on how the website is configured.</p>
+<ul class="list-unstyled">
+<li><strong>Login</strong> - If registration is immediate, the new member will be automatically logged in after completing the registration form.</li>
+<li><strong>Activation</strong> - If a message about email activation is displayed, the new account must first be activated before login. An email with instructions how to proceed is sent to the new member's email address.</li>
+<li><strong>Approval</strong> - If a message about member approval is displayed, the new account must first be approved by an administrator before login. An email acknowledging the new member is sent to their email address. Another email may be sent later to inform them whether or not their application has been approved.</li>
+</ul>
+<h4>Activating a New Account</h4>
+<p>If a website is configured to require email activation before login, an email will be sent to the email address provided at registration. The username and activation link are displayed in this e-mail. Selecting the activation link activates the member's account and prompts them to login. If a problem occurs with the activation link, the email also provides an activation code that can be used to complete the process. Note that a link to reset the password may be included in this e-mail, depending on the activation method enabled on the website.
+
+If a member attempts to login before completing the activation process, an error will be displayed noting that their email address must be validated. A Need another activation email? link is also displayed in case the email has somehow been lost.</p>
          
         </section>
 <section id="idocs_website_login">
