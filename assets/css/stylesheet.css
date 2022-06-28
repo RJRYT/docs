@@ -2956,7 +2956,7 @@ input:-internal-autofill-selected {
   border-radius: 4px 0px 0px 4px;
 }
 .alert-info {
- border: 5px solid #1F45FC;
+ border: 5px solid #66e0ff;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -2964,7 +2964,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-dark {
- border: 5px solid #1F45FC;
+ border: 5px solid #1a1a1a;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -2972,7 +2972,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-light {
- border: 5px solid #1F45FC;
+ border: 5px solid #b3b3b3;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -2980,7 +2980,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-warning {
- border: 5px solid #1F45FC;
+ border: 5px solid #ffff00;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -2988,7 +2988,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-danger {
- border: 5px solid #1F45FC;
+ border: 5px solid #ff471a;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -2996,7 +2996,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-success {
- border: 5px solid #1F45FC;
+ border: 5px solid #8cff66;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -3004,7 +3004,7 @@ input:-internal-autofill-selected {
 }
 
 .alert-primary {
- border: 5px solid #1F45FC;
+ border: 5px solid #0099ff;
  border-right: none;
  border-bottom: none;
  border-top: none;
@@ -3012,10 +3012,10 @@ input:-internal-autofill-selected {
 }
 
 .alert-secondary {
- border: 5px solid #1F45FC;
+ border: 5px solid #737373;
  border-right: none;
  border-bottom: none;
  border-top: none;
  border-radius: 5px;
 }
-//0099ff 737373 8cff66 ff471a ffff00 66e0ff b3b3b3 1a1a1a
+//       
