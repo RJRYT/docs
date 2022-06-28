@@ -3002,3 +3002,19 @@ input:-internal-autofill-selected {
  border-top: none;
  border-radius: 5px;
 }
+
+.alert-primary {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
+
+.alert-secondary {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
