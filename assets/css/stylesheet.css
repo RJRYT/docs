@@ -2962,3 +2962,43 @@ input:-internal-autofill-selected {
  border-top: none;
  border-radius: 5px;
 }
+
+.alert-dark {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
+
+.alert-light {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
+
+.alert-warning {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
+
+.alert-danger {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
+
+.alert-success {
+ border: 5px solid #1F45FC;
+ border-right: none;
+ border-bottom: none;
+ border-top: none;
+ border-radius: 5px;
+}
