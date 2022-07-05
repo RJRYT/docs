@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Javascript | RJRYT OFFICIAL</title>
+<meta name="description" content="This is a sample website for test javascript functions ">
+<meta name="author" content="New City Roleplay">
+<meta property="og:title" content="Javascript | RJRYT OFFICIAL " />
+        <meta property="og:description" content="This is a sample website for test javascript functions" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://rjryt.tech/docs/assets/images/logo/apple-touch-icon.png" />
+        <meta property="og:site_name" content="rjryt | javascript functions " />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <!-- Site Metas -->
+    <style>
+nav{
+  background: #ff0451;
+  padding: 10px 90px 10px 40px;
+  border: 1px solid #00f;
+  border-left: none;
+  border-right: none;
+  animation: colorchange 50s infinite;
+  box-shadow: 0 4px 8px 0 #fff, 0 6px 20px 0 #667AEA;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+nav ul li.logo{
+  flex: 1;
+  font-size: 30px;
+  font-weight: 700;
+  color: #599;
+  text-align: center;
+  animation: colorchange 50s infinite;
+}
+h4{
+  background: #aaff00;
+  padding: 10px 90px 10px 40px;
+  border: 2px solid #75f;
+  border-left: none;
+  border-bottom: none;
+  text-align: center;
+  color: #722f37;
+  animation: colorchange 80s infinite;
+  box-shadow: 0 4px 9px 0 #667AEA;
+}
+
+h5{
+  background: #aaff00;
+  padding: 10px 90px 10px 40px;
+  border: 6px solid #75f;
+  border-radius: 6px;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  text-align: left;
+  color: #722f37;
+  box-shadow: 0 4px 9px 0 #667AEA;
+  animation: colorchange 150s infinite;
+}
+
+h6{
+	font-size: 1%;
+}
+
+button{
+  color: cyan;
+  background-color: black;
+  animation: colorchange 35s infinite;
+  border-radius: 8px;
+  box-shadow: 0 4px 9px 0 #667AEA;
+}
+
+p{
+ color: yellow;
+ font-size: 120%;
+}
+
+.progress{
+ width: 450px;
+ height: 20px;
+ position: relative;
+ background-color: #ddd;
+ border: 2px solid #0f5;
+ border-radius: 8px;
+ box-shadow: 0 4px 9px 0 #667AEA;
+}
+
+.bar{
+ background-color: #4caf50;
+ width: 0px;
+ height: 20px;
+ position: relative;
+ border-radius: 8px;
+}
+body {
+  background-color: #455A64;
+}
+
+@keyframes colorchange {
+  0% {background-color: red; color: yellow;}
+  25% {background-color: yellow; color: blue;}
+  50% {background-color: blue; color: green;}
+  80% {background-color: green; color: red;}
+  100% {background-color: red; color: cyan;}
+}
+      
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color: #9caf50;
+  color: white;
+  border: 2px solid #4caf50;
+  border-radius: 3px;
+ box-shadow: 0 4px 9px 0 #667AEA;
+}
+
+.starsec{
+  content: " ";
+    position: absolute;
+    width: 4px;
+    height: 2px;
+    background: transparent;
+   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 11s linear infinite;
+}
+
+.starthird
+{
+  content: " ";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 10s linear infinite;
+}
+
+.starfourth
+{
+  content: " ";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+   box-shadow: 571px 173px #00BCD4, 1732px 143px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1793px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 50s linear infinite;
+}
+
+.starfifth
+{
+  content: " ";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+   box-shadow: 501px 173px #00BCD4, 1732px 643px #00BCD4, 1745px 454px #FF5722, 234px 784px #00BCD4, 1713px 1123px #FF9800, 1076px 504px #03A9F4, 633px 601px #FF5722, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 741px #CDDC39, 1646px 578px #FFEB3B, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1690px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 20s linear infinite;
+}
+      
+.starsixth
+{
+  content: " ";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+   box-shadow: 1945px 454px #FF5722, 294px 784px #00BCD4, 171px 173px #00BCD4, 1532px 143px #00BCD4, 1793px 1123px #FF9800, 350px 630px #FFEB3B, 1164px 782px #00BCD4, 76px 690px #3F51B5, 1825px 701px #CDDC39, 1646px 578px #FFEB3B, 1076px 504px #03A9F4, 633px 601px #FF5722, 544px 293px #2196F3, 445px 1061px #673AB7, 928px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1981px #9C27B0, 104px 1697px #8BC34A, 1167px 1338px #E91E63, 345px 1652px #009688, 1682px 1196px #F44336, 1995px 494px #8BC34A, 428px 798px #FF5722, 540px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #83C34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF0722, 89px 1406px #F44336, 25px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1464px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 10604px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 120s linear infinite;
+}
+      
+.starseventh
+{
+  content: " ";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: transparent;
+   box-shadow: 1732px 173px #00B6D4, 1393px 1123px #FFf800, 370px 630px #FF0B3B, 1164px 786px #00BAD4, 76px 620px #3F51F5, 1545px 454px #0F5722, 254px 784px #00FCD4, 575px 173px #00BT14, 2825px 701px #5DDC39, 1642px 578px #F11B3B, 1026px 504px #03A2F4, 921px 47px #00BCD4, 168px 1410px #8BC34A, 777px 782px #9C27B0, 1235px 1941px #9C27B0, 104px 1640px #81C34A, 693px 601px #115722, 544px 290px #2336F3, 485px 1061px #6732B7, 1167px 1938px #E94463, 345px 1352px #009348, 1382px 1196px #144336, 1965px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1344px #673AB7, 1102px 1745px #3F51B5, 1592px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1378px #8BC34A, 861px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BaD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00B8D4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 3397px #FFF, 1084px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDf39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #F2EB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 463px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1972px 248px #FFF, 1669px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 263px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 40s linear infinite;
+}
+      
+.stareight
+{
+  content: " ";
+    position: absolute;
+    width: 1px;
+    height: 8px;
+    background: transparent;
+   box-shadow: 571px 273px #00BCD4, 1733px 143px #00BCD4, 1725px 454px #FF5722, 134px 784px #00BCD4, 1775px 1123px #FF9800, 1256px 504px #03A9F4, 633px 611px #FF5722, 370px 630px #FFEB3B, 1174px 782px #00BCD4, 76px 660px #3F51B5, 1885px 701px #CDDC39, 1642px 578px #FFEB3B, 544px 295px #2196F3, 345px 1061px #673AB7, 958px 47px #00BCD4, 158px 1410px #8BC34A, 877px 782px #9C27B0, 1235px 1961px #9C27B0, 104px 2690px #8BC34A, 1167px 1368px #E91E63, 341px 1652px #009688, 1282px 1196px #F44336, 1997px 494px #8BC34A, 428px 798px #FF5722, 340px 1623px #F44336, 605px 349px #9C27B0, 1339px 1348px #673AB7, 1302px 1745px #3F51B5, 1692px 1676px #2196F3, 419px 1024px #FF9800, 630px 1033px #4CAF50, 1995px 1644px #00BCD4, 1092px 712px #9C27B0, 1355px 606px #F44336, 622px 1881px #CDDC39, 1481px 621px #9E9E9E, 19px 1348px #8BC34A, 864px 1780px #E91E63, 442px 1136px #2196F3, 67px 712px #FF5722, 89px 1406px #F44336, 275px 321px #009688, 592px 630px #E91E63, 1012px 1690px #9C27B0, 1749px 23px #673AB7, 94px 1542px #FFEB3B, 1201px 1657px #3F51B5, 1505px 692px #2196F3, 1799px 601px #03A9F4, 656px 811px #00BCD4, 701px 597px #00BCD4, 1202px 46px #FF5722, 890px 569px #FF5722, 1613px 813px #2196F3, 223px 252px #FF9800, 983px 1093px #F44336, 726px 1029px #FFC107, 1764px 778px #CDDC39, 622px 1643px #F44336, 174px 1559px #673AB7, 212px 517px #00BCD4, 340px 505px #FFF, 1700px 39px #FFF, 1768px 516px #F44336, 849px 391px #FF9800, 228px 1824px #FFF, 1119px 1680px #FFC107, 812px 1480px #3F51B5, 1438px 1585px #CDDC39, 137px 1397px #FFF, 1080px 456px #673AB7, 1208px 1437px #03A9F4, 857px 281px #F44336, 1254px 1306px #CDDC39, 987px 990px #4CAF50, 1655px 911px #00BCD4, 1102px 1216px #FF5722, 1807px 1044px #FFF, 660px 435px #03A9F4, 299px 678px #4CAF50, 1193px 115px #FF9800, 918px 290px #CDDC39, 1447px 1422px #FFEB3B, 91px 1273px #9C27B0, 108px 223px #FFEB3B, 146px 754px #00BCD4, 461px 1446px #FF5722, 1004px 391px #673AB7, 1529px 516px #F44336, 1206px 845px #CDDC39, 347px 583px #009688, 1102px 1332px #F44336, 709px 1756px #00BCD4, 1974px 248px #FFF, 1769px 1344px #FF5722, 1132px 406px #F44336, 320px 1076px #CDDC39, 126px 943px #FFEB3B, 253px 604px #FF5722, 1546px 692px #F44336;
+  animation: animStar 5s linear infinite;
+}
+      
+@keyframes animStar
+{
+  0% {
+    transform: translateY(0px);
+}
+  100% {
+    transform: translateY(-2000px);
+}
+}
+    </style>
+    <script>
+    	let count=0;
+function time() {
+document.getElementById("text").innerHTML = Date();
+}
+function alert1() {
+document.getElementById("text").innerHTML = "Ok<br>Iam glad to hear that.";
+alert("Hello bro are you ok now!");
+}
+function reset() {
+document.getElementById("text").innerHTML = "Message Bar";
+document.getElementById("progress").innerHTML = "Progress Bar";
+document.getElementById("extra").innerHTML = "";
+document.getElementById("footer").innerHTML = "Author: RJRYT<br>All rights reserved | Copyright 2022 RJRYT";
+document.getElementById("welco").innerHTML = "Welcome to RJRYT OFFICIAL website";
+document.getElementById("head").innerHTML = "RJRYT OFFICIAL";
+count = 0;
+}
+function cmd() {
+let txt = "Are you sure to use this command.";
+if(confirm(txt) == 1) txt = "OK We will proceed it. <br>Thanks";
+else txt = "OK We canclled it. <br>Thanks";
+document.getElementById("text").innerHTML = txt;
+}
+function cmd3() {
+ let txt = "Please enter your name here.";
+ let name = prompt(txt, "rjryt");
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+    if(name == null || name == 0) name = "Dude";
+    txt = "Hello " + name + "<br>Welcome to the RJRYT OFFICIAL website.<br>Thanks for your time.";
+    document.getElementById("text").innerHTML = txt;
+    document.getElementById("welco").innerHTML = "Hello " + name + " <br>Welcome to the RJRYT OFFICIAL website";
+    setCookie("username", name, 30);
+  }
+}
+function progress() {
+ const bar = document.getElementById("pro");
+ let width = 0;
+ document.getElementById("text").innerHTML = "Loading progress bar...";
+ document.getElementById("progress").innerHTML = "Loading...";
+ btnoff();
+ const id = setInterval(frame, 50);
+ function frame() {
+  if(width == 100) {
+    clearInterval(id);
+    document.getElementById("text").innerHTML = "Success<br>The progress bar is loaded.";
+    document.getElementById("progress").innerHTML = "Success";
+    btnon();
+  } 
+  else {
+     width ++;
+     bar.style.width = width + '%';
+   }
+ }
+}
+function startintro() {
+	document.getElementById("btnn").innerHTML = "";  
+	document.getElementById("ok").innerHTML = "Loading please wait.";  
+	let btn = document.createElement("div");  
+           btn.setAttribute("class", "progress"); 
+           btn.setAttribute("id", "prodiv"); 
+            document.getElementById("btnn").appendChild(btn);  
+            
+            btn = document.createElement("div");  
+           btn.setAttribute("class", "bar"); 
+           btn.setAttribute("id", "pro"); 
+            document.getElementById("prodiv").appendChild(btn);  
+	intro();
+}
+function intro() {
+ const bar = document.getElementById("pro");
+ let width = 0;
+ const id = setInterval(frame, 30);
+ function frame() {
+  if(width == 100) {
+    clearInterval(id);
+    addbtn();
+  } 
+  else {
+     width ++;
+     bar.style.width = width + '%';
+   }
+ }
+}
+function name_ch() {
+ let txt = "Please Enter the name to change.";
+ let name = prompt(txt, "RJRYT OFFICIAL");
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+  //  if(name == null || name == 0) name = "RJRYT OFFICIAL";
+    document.getElementById("head").innerHTML = name;
+  }
+}
+function wel_ch() {
+ let txt = "Please Enter the welcome message to change.";
+ let name = prompt(txt, "Welcome to RJRYT OFFICIAL website");
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+   // if(name == null || name == 0) name = "Welcome to RJRYT OFFICIAL website";
+    document.getElementById("welco").innerHTML = name;
+  }
+}
+function addmsg() {
+ let txt = "Please Enter the paragraph to change.";
+ let name = prompt(txt, "The Test message");
+ if(count >= 50) {
+  document.getElementById("text").innerHTML = "Maximum number of messages reached";
+  alert("Maximum number of messages reached");
+ }
+ if(count >= 52) {
+  document.getElementById("text").innerHTML = "Message reseted";
+  count = 0;
+  document.getElementById("extra").innerHTML = "";
+  return 0;
+ }
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+    if(name == null || name == 0) name = "Enter paragraph";
+    document.getElementById("extra").innerHTML += "<p>"+name+"</p>";
+    count++;
+  }
+}
+function addemb() {
+ let txt = "Please Enter the paragraph to change.";
+ let name = prompt(txt, "The Test message");
+ if(count >= 50) {
+  document.getElementById("text").innerHTML = "Maximum number of messages reached";
+  alert("Maximum number of messages reached");
+ }
+ if(count >= 52) {
+  document.getElementById("text").innerHTML = "Message reseted";
+  count = 0;
+  document.getElementById("extra").innerHTML = "";
+  return 0;
+ }
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+    if(name == null || name == 0) name = "Enter paragraph";
+    document.getElementById("extra").innerHTML += "<h5>"+name+"</h5>";
+    count++;
+  }
+}
+function addfooter() {
+ let txt = "Please Enter the footer to change.";
+ let name = prompt(txt, "Credits to RJRYT");
+ if(name == null) {
+    txt = "OK<br> You cancelled the process";
+    document.getElementById("text").innerHTML = txt;
+  }
+  else {
+    if(name == null || name == 0) name = "Credits to RJRYT";
+    document.getElementById("footer").innerHTML = name;
+  }
+}
+function addbtns() {
+	if(count >= 100) {
+  document.getElementById("text").innerHTML = "Maximum number of Buttons reached";
+  alert("Maximum number of messages reached");
+ }
+ if(count >= 101) {
+  document.getElementById("text").innerHTML = "Buttons reseted";
+  count = 0;
+  document.getElementById("extra").innerHTML = "";
+  return 0;
+ }
+	var btn = document.createElement("button");  
+            btn.innerHTML = "Click Here";  
+           btn.setAttribute("id", "urbtn"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "alert('This button is added by you')"); 
+            document.getElementById("extra").appendChild(btn);  
+            count++;
+}
+function btnoff() {
+	document.getElementById("time").disabled = 1;
+	document.getElementById("alert").disabled = 1;
+document.getElementById("reset").disabled = 1;
+document.getElementById("cmd").disabled = 1;
+document.getElementById("cmd3").disabled = 1;
+document.getElementById("progress").disabled = 1;
+document.getElementById("namech").disabled = 1;
+document.getElementById("welch").disabled = 1;
+document.getElementById("addmsg").disabled = 1;
+document.getElementById("addemb").disabled = 1;
+document.getElementById("location").disabled = 1;
+document.getElementById("addfooter").disabled = 1;
+document.getElementById("addbtn").disabled = 1;
+}
+function btnon() {
+	document.getElementById("time").disabled = 0;
+	document.getElementById("alert").disabled = 0;
+document.getElementById("cmd").disabled = 0;
+document.getElementById("cmd3").disabled = 0;
+document.getElementById("reset").disabled = 0;
+document.getElementById("progress").disabled = 0;
+document.getElementById("namech").disabled = 0;
+document.getElementById("welch").disabled = 0;
+document.getElementById("addmsg").disabled = 0;
+document.getElementById("addemb").disabled = 0;
+document.getElementById("location").disabled = 0;
+document.getElementById("addfooter").disabled = 0;
+document.getElementById("addbtn").disabled = 0;
+}
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    document.getElementById("welco").innerHTML = "Hello " + user + " <br>Welcome to the RJRYT OFFICIAL website";
+  } else {
+     user = prompt("Hello sir  Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+       alert("Welcome " + user + " To the website");
+       document.getElementById("welco").innerHTML = "Hello " + user + " <br>Welcome to the RJRYT OFFICIAL website";
+     }
+  }
+}
+
+function getLocation() {
+  try {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } catch {
+    document.getElementById("text").innerHTML = err;
+  }
+}
+
+function showPosition(position) {
+  document.getElementById("text").innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+function addbtn() {  
+	document.getElementById("btnn").innerHTML = "";  
+	document.getElementById("ok").innerHTML = "Ok<br>React to buttons to get results.";  
+            var btn = document.createElement("button");  
+            btn.innerHTML = "Time";  
+           btn.setAttribute("id", "time"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "time()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Alert";  
+           btn.setAttribute("id", "alert"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "alert1()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Reset";  
+           btn.setAttribute("id", "reset"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "reset()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Cmd";  
+           btn.setAttribute("id", "cmd"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "cmd()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Name";  
+           btn.setAttribute("id", "cmd3"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "cmd3()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Progress";  
+           btn.setAttribute("id", "progress"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "progress()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            let para = document.createElement("p");
+            document.getElementById("btnn").appendChild(para);
+            btn = document.createElement("button");  
+            btn.innerHTML = "Change Name";  
+           btn.setAttribute("id", "namech"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "name_ch()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Change Welcome";  
+           btn.setAttribute("id", "welch"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "wel_ch()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Add Paragraph";  
+           btn.setAttribute("id", "addmsg"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "addmsg()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Add Embed";  
+           btn.setAttribute("id", "addemb"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "addemb()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            para = document.createElement("p");
+            document.getElementById("btnn").appendChild(para);
+            btn = document.createElement("button");  
+            btn.innerHTML = "Location";  
+           btn.setAttribute("id", "location"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "getLocation()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Change Footer";  
+           btn.setAttribute("id", "addfooter"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "addfooter()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            btn = document.createElement("button");  
+            btn.innerHTML = "Add Button";  
+           btn.setAttribute("id", "addbtn"); 
+           btn.setAttribute("type", "button"); 
+           btn.setAttribute("onclick", "addbtns()"); 
+            document.getElementById("btnn").appendChild(btn);  
+            
+            para = document.createElement("p");
+            document.getElementById("btnn").appendChild(para);
+            
+            btn = document.createElement("div");  
+           btn.setAttribute("class", "progress"); 
+           btn.setAttribute("id", "prodiv"); 
+            document.getElementById("btnn").appendChild(btn);  
+            
+            btn = document.createElement("div");  
+           btn.setAttribute("class", "bar"); 
+           btn.setAttribute("id", "pro"); 
+            document.getElementById("prodiv").appendChild(btn);  
+            
+            btn = document.createElement("H5");  
+           btn.setAttribute("id", "text"); 
+            document.getElementById("btnn").appendChild(btn);  
+}  
+/*
+<button id="time" type="button" onclick="time()">Time</button>
+<button id="alert"  type="button" onclick="alert1()">Alert</button>
+<button id="reset" type="button" onclick="reset()">Reset</button>
+<button id="cmd" type="button" onclick="cmd()">Cmd</button>
+<button id="cmd3" type="button" onclick="cmd3()">Name</button>
+<button id="progress" type="button" onclick="progress()">Progress Bar</button><br><br>
+<button id="namech" type="button" onclick="name_ch()">Change Name</button>
+<button id="welch" type="button" onclick="wel_ch()">Change Welcome</button>
+<button id="addmsg" type="button" onclick="addmsg()">Add Paragraph</button>
+<button id="addemb" type="button" onclick="addemb()">Add Embed</button>
+<button id="location" type="button" onclick="getLocation()">location</button>
+<button id="addfooter" type="button" onclick="addfooter()">Change Footer</button>
+<button id="addbtn" type="button" onclick="addbtns()">Add Button</button>
+<br><br>
+<div class="progress" id="prodiv">
+ <div class="bar" id="pro"></div>
+</div>
+<h5 id="text">Message Bar</h5>
+*/
+    </script>
+  </head>
+  <body onload="checkCookie()">
+    <nav>
+      <ul>
+        <li id="head" class="logo">RJRYT OFFICIAL</li>
+      </ul>
+    </nav>
+    <div>
+  <div class="starsec"></div>
+  <div class="starthird"></div>
+  <div class="starfourth"></div>
+  <div class="starfifth"></div>
+  <div class="starsixth"></div>
+  <div class="starseventh"></div>
+  <div class="stareight"></div>
+</div>
+
+<h4 id="welco">Welcome to RJRYT OFFICIAL website</h4>
+<p id="ok">To start please click on the button.</p>
+<div id="btnn" class="button">
+<button id="addbtn" type="button" onclick="startintro()">start now</button>
+</div>
+<div id="extra"></div>
+<div>
+	<br><br>
+<footer>
+  <p id="footer">Author: RJRYT<br>
+  All rights reserved | Copyright 2022 RJRYT</p>
+</footer>
+</div>
+<h6>This website is only for experiment | data will not saved | Website uses cookies system</h6>
+  </body>
+</html>
