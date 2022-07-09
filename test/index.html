@@ -217,6 +217,7 @@ document.getElementById("text").innerHTML = "Ok<br>Iam glad to hear that.";
 alert("Hello bro are you ok now!");
 }
 function reset() {
+document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 document.getElementById("text").innerHTML = "Message Bar";
 document.getElementById("progress").innerHTML = "Progress Bar";
 document.getElementById("extra").innerHTML = "";
