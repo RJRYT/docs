@@ -468,7 +468,7 @@ function checkCookie() {
   } else {
      user = prompt("Hello sir  Please enter your name:","");
      if (user != "" && user != null) {
-       setCookie("username", user, 30);
+       setCookie("username", user, 2);
        alert("Welcome To the website " + user);
        document.getElementById("welco").innerHTML = "Hello " + user + " <br>Welcome to the RJRYT OFFICIAL website";
      }
