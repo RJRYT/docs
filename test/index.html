@@ -463,11 +463,12 @@ function checkCookie() {
   let user = getCookie("username");
   if (user != "") {
     document.getElementById("welco").innerHTML = "Hello " + user + " <br>Welcome to the RJRYT OFFICIAL website";
+    alert("Hyy " + user + " Welcome again to here !");
   } else {
      user = prompt("Hello sir  Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
-       alert("Welcome " + user + " To the website");
+       alert("Welcome To the website" + user);
        document.getElementById("welco").innerHTML = "Hello " + user + " <br>Welcome to the RJRYT OFFICIAL website";
      }
   }
